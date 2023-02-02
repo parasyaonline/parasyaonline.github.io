@@ -1,1 +1,131 @@
-<h1>Hello, World</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parasyam</title>
+    <link href="parasyam.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+     <header>
+        <div class="header">
+            <img id=headerimg src="./parasya.jpeg">
+        </div>
+     </header>
+        <div class="container">
+            <div class="containera">
+                <img id="img1" src="./WhatsApp Image 2023-01-04 at 16.31.11.jpeg">
+            </div>
+            <div class="containerb">
+                <img id="img1" src="./WhatsApp Image 2023-01-04 at 16.33.10.jpeg">
+            </div>
+            <div class="containerc">
+                <img id="img1" src="./WhatsApp Image 2023-01-04 at 16.33.13 (1).jpeg">
+            </div>
+            <div class="containerd">
+                <img id="img1" src="./WhatsApp Image 2023-01-04 at 16.33.13.jpeg">
+            </div>
+            <div class="containere">
+                <img id="img1" src="./WhatsApp Image 2023-01-04 at 16.33.58.jpeg">
+            </div>
+            <div class="containerf">
+                <div class="validation1">
+                    <form id="submit" action="">
+                      
+                      <h1>Contact</h1>
+                  
+                    <div class="input-group">
+                       
+                        FullName:
+                      <input type="text" placeholder="Enter your name here" id="contact-name" name="name" onkeyup="validatename()">
+                      <span id="name-error"></span>
+                    </div>
+                    <div class="input-group">
+                      
+                        Phone no:
+                      <input type="tel" placeholder="Phone No:" id="contact-phone" name="tel" onkeyup="validatephone()">
+                      <span id="phone-error"></span>
+                    </div>
+                    <div class="input-group">
+                
+                        Email ID:
+                      <input type="email" placeholder="Email Id" id="contact-email" name="email" onkeyup="validateemail()">
+                      <span id="email-error"></span>
+                    </div>
+                    <div class="input-group">
+            
+                        Message:
+                      <textarea rows="5" placeholder="Message" id="contact-message" name="message" onkeyup="validatemessage()"></textarea>
+                      
+                      <span id="message-error"></span>
+                    </div>
+                  
+                    <button onclick="return validateform()">Submit</button>
+                    <span id="submit-error"></span>
+                </div>
+            
+            </div>
+        </div> 
+        <div class="footer">
+            <div class="footer1">
+                <div class="footera">
+                    <h1 id="w"><b>WE</b></h1>
+                </div>
+                <div class="footerb">
+                    <p id="w1"><b>DESIGN</b><br>
+                              <b>ADVERTISE</b><br>
+                               <b>BRAND</b></p>
+                </div>
+               
+            </div>
+            <div class="footer3">
+                <h2 class="about">About</h2>
+                <p id="aboutp">Parasya.Online is an advertising agency providing full scale marketing and advertising services. 
+                    We specialize in deploying creatively branded, cost effective, online advertising and media campaigns 
+                    that strengthen brands, engage audiences, and elevate business.</p>
+            </div>
+            <div class="footer2">
+                <p id="address"><b>Parasya.online</b><br>
+                    TK building,
+                    Near Lulu Mall,<br>
+                    Opp.Edappally Juma Masjid
+                    Edappally</p>
+                <p id="address"><b>+91 7736481761</b></p>
+                <div class="icons">
+                <a id="socialmedia" href="https://www.instagram.com/parasya.online/?igshid=YmMyMTA2M2Y%3D"><i class="fa-brands fa-instagram fa-2x"></i></a>    
+                   <a id="socialmedia" href="https://api.whatsapp.com/message/NPQLHXP4MRB4B1?autoload=1&app_absent=0" ><i class="fa-brands fa-whatsapp fa-2x"></i></a>
+              
+
+            </div>
+            </div>
+
+        </div>
+
+    
+
+        <script src="./validate.js"></script>
+      <script src="assets/vendor/php-email-form/validate.js"></script>
+      <script>
+        $("#submit").submit((e)=>{
+            e.preventDefault()
+            $.ajax({
+                url:"",
+                data:$("#submit").serialize(),
+                method:"post",
+                success:function (response){
+                    alert("Form submitted successfully")
+                    window.location.reload()
+                   
+                },
+                error:function (err){
+                    alert("Something Wrong")
+      
+                }
+            })
+        })
+      </script>
+</body>
+</html>
